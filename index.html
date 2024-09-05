@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Firman Dwi Nugraha</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Profil Firman Dwi Nugraha</h1>
+        <div class="image-container">
+            <img src="firman.jpg" alt="Foto Firman Dwi Nugraha" class="profile-pic">
+        </div>
+        <audio id="hover-sound">
+            <source src="sound.mp3" type="audio/mpeg">
+        </audio>
+                    
+        <table>
+            <tr>
+                <td><strong>Nama</strong></td>
+                <td>Firman Dwi Nugraha</td>
+            </tr>
+            <tr>
+                <td><strong>Tanggal Lahir</strong></td>
+                <td>5 April 2008</td>
+            </tr>
+            <tr>
+                <td><strong>Tempat Lahir</strong></td>
+                <td>Surabaya, Indonesia</td>
+            </tr>
+            <tr>
+                <td><strong>Status</strong></td>
+                <td>Pelajar</td>
+            </tr>
+            <tr>
+                <td><strong>Hobi</strong></td>
+                <td>Mancing</td>
+            </tr>
+        </table>
+
+        <div class="about">
+            <h2>Tentang Firman Dwi Nugraha</h2>
+            <p>Saya seorang pelajar di SMK TELKOM SIDOARJO.</p>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const image = document.querySelector('.profile-pic');
+            const sound = document.getElementById('hover-sound');
+
+            image.addEventListener('mouseenter', () => {
+                sound.play();
+            });
+
+            image.addEventListener('mouseleave', () => {
+                sound.pause();
+                sound.currentTime = 0; 
+            });
+        });
+    </script>
+</body>
+</html>
